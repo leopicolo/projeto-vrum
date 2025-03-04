@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Entregas Florianópolis, Vrum Express, Motoboy Florianópolis, Entregas São José, Entregas Palhoça, Motoboys profissionais, Entregas rápidas, Suporte personalizado, Serviços de motoboy, Entregas seguras Grande Florianópolis">
+    <meta name="description" content="Vrum Express: Entregas rápidas e seguras em Florianópolis, São José e Palhoça. Motoboys profissionais, suporte personalizado e soluções para empresas locais.">
+
+    <title>Vrum Express</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilo Personalizado -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/imagens/LogoVrumExpress-Atualizado.png">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#inicio">
+                <img id="logo" src="/imagens/LogoVrumExpress-Atualizado.png" alt="Vrum Express" height="50">
+            </a>
+            <!-- Botão de Menu Hambúrguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quemsomos">Quem Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario">Contato</a></li>
+                </ul>
+                <!-- Ícones Sociais -->
+                <div id="social-buttons" class="d-flex align-items-center ms-3">
+                    <a href="https://bit.ly/40J8VvD" target="_blank" class="ms-2">
+                        <img src="/imagens/iconeWhatsapp.png" alt="WhatsApp" height="30">
+                    </a>
+                    <a href="https://www.instagram.com/vrum_express1/" target="_blank" class="ms-2">
+                        <img src="/imagens/iconeInstagram.png" alt="Instagram" height="30">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section id="inicio" class="text-center py-5">
+            <h1>Vrum Express - Sua Entrega Rápida e Segura! 🚀</h1>
+            <p>Na Vrum Express, transformamos a logística em velocidade e confiança!
+                Seja um simples envelope ou um pacote 📦 especial,
+                aqui sua entrega tem máxima prioridade. Estamos aqui para garantir que chegue ao destino com segurança, agilidade e qualidade.
+                Conectando empresas e clientes com soluções de entrega expressa! 🏍️💨</p>
+        </section>
+    </main>
+
+    <!-- Seção de Imagens -->
+    <section id="imagens">
+        <img src="/imagens/praia.png" alt="Motoboy com caixa">
+        <img src="/imagens/moto.png" alt="Motoboy em moto">
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="py-5">
+        <h2>Por que escolher a Vrum Express?</h2>
+        <ul>
+            <li>✅ Entregas no mesmo dia – nunca perca prazos importantes.</li>
+            <li>✅ Motoboys para demandas esporádicas ou fixas – flexibilidade para sua empresa.</li>
+            <li>✅ Suporte via WhatsApp – atendimento rápido e acompanhamento em tempo real.</li>
+            <li>✅ Cobertura regional – atendemos toda a Grande Florianópolis.</li>
+        </ul>
+        <a href="https://bit.ly/40J8VvD" class="cta-button-whatsapp">Fale agora com a Vrum Express no WhatsApp!</a>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quemsomos" class="py-5">
+        <h2>Conheça a Vrum Express</h2>
+        <p>A Vrum Express é mais do que uma empresa de entregas. Somos uma solução completa para lojistas, 
+            empresas e profissionais autônomos que precisam de entregas rápidas e seguras. 
+            Nossa base em São José nos permite atender toda a Grande Florianópolis com eficiência e dedicação. 
+            Desde entregas esporádicas até contratos de motoboys fixos, garantimos qualidade em cada serviço realizado. 
+            Confie na Vrum Express e experimente a diferença!
+        </p>
+    </section>
+
+    <!-- Formulário -->
+    <section id="formulario" class="container py-5">
+        <h2>Entre em contato conosco!</h2>
+        <form action="/api/contact" method="post" id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+            <input type="tel" id="phone" name="phone" placeholder="(48) 99999-9999" maxlength="15" required>
+            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            <textarea id="message" name="message" placeholder="Mensagem" rows="5" required></textarea>
+            <button type="submit" id="enviar" class="btn btn-primary">Enviar mensagem</button>
+            <p id="responseMessage" style="display: none;"></p>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Vrum Express. Todos os direitos reservados.</p>
+        <p>Contato: <a href="mailto:vrum_express1@gmail.com">vrum_express1@gmail.com</a></p>
+        <p><a href="#inicio" class="scroll-link">Voltar ao topo</a></p>
+    </footer>
+
+    <div id="whatsapp-fixed">
+        <a href="https://bit.ly/40J8VvD" target="_blank">
+            <img src="/imagens/iconeWhatsappFixo.png" alt="WhatsApp">
+        </a>
+    </div>    
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# Ignorar arquivos de ambiente
+.env
+
+# Ignorar dependências do Node.js
+node_modules/
+
+# Ignorar logs
+*.log
+
+# Ignorar cache
+.cache/
+
+# Ignorar diretórios e arquivos do sistema
+*.xml
+*.pem
+*.log
+*.ini
+.DS_Store
+node_modules/
+.cache/
+.AppData/
+Downloads/
+Desktop/
+Pictures/
+Music/
+Videos/
+*.txt
+
+# Ignorar pastas do sistema e arquivos sensíveis
+Ambiente de Impressão/
+Ambiente de Rede/
+Configurações Locais/
+Menu Iniciar/
+Meus Documentos/
+
+
+
+

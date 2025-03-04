@@ -1,0 +1,351 @@
+/* Reset básico */
+body, h1, h2, p, ul, li, a, button, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Cores */
+:root {
+    --primary-color: #0056D2; /* Azul */
+    --neutral-light: #F8F9FA; /* Cinza Claro */
+    --neutral-dark: #202020; /* Cinza Escuro */
+    --text-light: #FFFFFF;
+    --whatsapp-color: #25D366; /* Verde do WhatsApp */
+}
+#logo{
+    height: 120px;
+    width: 120px;
+}
+/* Cabeçalho */
+nav {
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.navbar-brand img {
+    height: 70px;
+    width: auto; /* Mantém a proporção */
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e00202;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Ícones sociais no cabeçalho */
+.navbar .d-flex img {
+    height: 35px;
+    margin-left: 0.5rem;
+}
+
+
+/* Título Principal (Início) */
+#inicio {
+    padding: 4rem 1rem;
+    background-color: var(--neutral-light);
+}
+
+#inicio h1 {
+    font-size: 2.4rem; /* Aumentado o tamanho do título */
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+#inicio p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    line-height: 1.8; /* Melhor espaçamento entre linhas */
+    font-size: 1.2rem; /* Aumentado o tamanho do texto */
+}
+
+/* Quem Somos */
+#quemsomos {
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+#quemsomos h2 {
+    font-size: 2.5rem; /* Aumentado o tamanho do título */
+    margin-bottom: 1.5rem;
+}
+
+#quemsomos p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.2rem; /* Aumentado o tamanho do texto */
+}
+
+
+/* Seção de Imagens */
+#imagens {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap; /* Responsivo para dispositivos menores */
+    background-color: var(--neutral-light);
+}
+
+#imagens img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+    }
+
+    #imagens img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+    .nav-link{
+        border-radius: 1px solid white;
+    }
+
+    #inicio h1 {
+        font-size: 1.8rem;
+    }
+
+    #inicio p {
+        font-size: 1.3rem;
+    }
+    .navbar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 itens por linha */
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+        border-bottom: solid white 1px;
+    }
+
+    #social-buttons img{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 1.1rem; /* Fonte maior no geral */
+    }
+
+    #inicio h1 {
+        font-size: 3rem; /* Título principal maior */
+    }
+
+    #inicio p {
+        font-size: 1.5rem; /* Texto do início maior */
+    }
+
+    #beneficios ul li {
+        font-size: 1.8rem; /* Texto dos benefícios maior */
+    }
+
+    #quemsomos h2 {
+        font-size: 3rem; /* Título "Quem Somos" maior */
+    }
+
+    #quemsomos p {
+        font-size: 1.4rem; /* Texto "Quem Somos" maior */
+    }
+
+    #formulario h2 {
+        font-size: 2.5rem; /* Título do formulário maior */
+    }
+
+    footer {
+        font-size: 1rem; /* Texto no rodapé um pouco maior */
+    }
+}
+
+
+/* Benefícios */
+#beneficios {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--neutral-light);
+}
+
+#beneficios h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+#beneficios ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+#beneficios ul li {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Botão de WhatsApp */
+#beneficios .cta-button-whatsapp {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--whatsapp-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#beneficios .cta-button-whatsapp:hover {
+    background-color: #136922;
+}
+
+/* Quem Somos */
+#quemsomos {
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+#quemsomos h2 {
+    margin-bottom: 1.5rem;
+}
+
+#quemsomos p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Formulário */
+#formulario {
+    padding: 2rem 1rem;
+    background-color: var(--neutral-light);
+    text-align: center;
+}
+
+#formulario h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+#formulario form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#formulario input,
+#formulario textarea,
+#formulario button {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#formulario button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+#formulario button:hover {
+    background-color: #143057;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: var(--neutral-dark);
+    color: var(--text-light);
+    padding: 1.5rem 1rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #e00202;
+}
+
+/* Botão Fixo do WhatsApp */
+#whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#whatsapp-fixed a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Levemente abaixo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Ajuste os tempos */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Posição normal */
+}
+
+.msg-form {
+    margin-top: 1rem;
+    color: green; /* Mensagem de sucesso */
+    font-size: 1.2rem;
+    text-align: center;
+    display: none; /* Oculto por padrão */
+}
